@@ -2,12 +2,12 @@
 ## Introductory Project: Diagonal Sudoku Solver
 
 # Question 1 (Naked Twins)
-Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+Q: How do we use constraint propagation to solve the naked twins problem? 
+A: The naked twins problem is local to a game board unit.  We can implement the naked twin problem solution by operating only in such a unit and only with data related to it and the boxes within it.  Therefore, if a naked twin is detected we can eliminate box value possibilities without knowing anything about surrounding units on the board.
 
 # Question 2 (Diagonal Sudoku)
-Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+Q: How do we use constraint propagation to solve the diagonal sudoku problem? 
+A: We simply encode the two extra diagonals as new units for the puzzle board.  Boxes then gain new peers depending on if they are positioned within the diagonals.  The infrastructure setup prior for row, column, and square units can then augmented with relative ease.  This preexisting infrastructure already implements constraint propagation.  Thus, implementing the diagonal units does not make the computational requirements as unwieldy as we initially thought and the overall computer program can remain resistant to much change.
 
 ### Install
 
